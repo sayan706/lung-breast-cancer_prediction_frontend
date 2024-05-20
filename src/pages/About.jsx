@@ -2,13 +2,13 @@ import React from "react";
 
 function About() {
   return (
-    <div className="mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 bg-slate-600  min-h-screen">
+    <div className="font-roboto mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 bg-gray-800 min-h-screen">
       <div className="flex flex-col lg:flex-row justify-between gap-8">
         <div className="w-full lg:w-5/12 flex flex-col justify-center">
-          <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-black pb-4">
+          <h1 className="text-3xl lg:text-4xl font-bold leading-9 pb-4 text-white">
             About Us
           </h1>
-          <p className="font-normal text-base leading-6 text-black">
+          <p className="font-normal text-base leading-6 text-gray-200">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum.In the first place we have granted to God, and
@@ -18,7 +18,7 @@ function About() {
             observed; which is apparent from
           </p>
         </div>
-        <div className="w-full lg:w-8/12">
+        <div className="w-full lg:w-8/12 shadow-lg shadow-gray-900">
           <img
             className="w-full h-full"
             src="https://i.ibb.co/FhgPJt8/Rectangle-116.png"
@@ -28,10 +28,10 @@ function About() {
       </div>
       <div className="flex lg:flex-row flex-col justify-between gap-8 pt-12">
         <div className="w-full lg:w-5/12 flex flex-col justify-center">
-          <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-black pb-4">
+          <h1 className="text-3xl lg:text-4xl font-bold leading-9 pb-4 text-white">
             Our Story
           </h1>
-          <p className="font-normal text-base leading-6 text-black">
+          <p className="font-normal text-base leading-6 text-gray-200">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum.In the first place we have granted to God, and
@@ -42,66 +42,58 @@ function About() {
           </p>
         </div>
         <div className="w-full lg:w-8/12 lg:pt-8">
-          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
+          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg shadow-gray-900 rounded-md text-white">
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
               <img
                 className="md:block hidden"
                 src="https://i.ibb.co/FYTKDG6/Rectangle-118-2.png"
-                alt="Alexa featured Image"
+                alt="Alexa featured Image1"
               />
               <img
                 className="md:hidden block"
                 src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
-                alt="Alexa featured Image"
+                alt="Alexa featured Image2"
               />
-              <p className="font-medium text-xl leading-5 text-black mt-4">
-                Alexa
-              </p>
+              <p className="font-medium text-xl leading-5 mt-4">Alexa</p>
             </div>
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
               <img
                 className="md:block hidden"
                 src="https://i.ibb.co/fGmxhVy/Rectangle-119.png"
-                alt="Olivia featured Image"
+                alt="Olivia featured Image1"
               />
               <img
                 className="md:hidden block"
                 src="https://i.ibb.co/NrWKJ1M/Rectangle-119.png"
-                alt="Olivia featured Image"
+                alt="Olivia featured Image2"
               />
-              <p className="font-medium text-xl leading-5 text-black mt-4">
-                Olivia
-              </p>
+              <p className="font-medium text-xl leading-5 mt-4">Olivia</p>
             </div>
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
               <img
                 className="md:block hidden"
                 src="https://i.ibb.co/Pc6XVVC/Rectangle-120.png"
-                alt="Liam featued Image"
+                alt="Liam featued Image1"
               />
               <img
                 className="md:hidden block"
                 src="https://i.ibb.co/C5MMBcs/Rectangle-120.png"
-                alt="Liam featued Image"
+                alt="Liam featued Image2"
               />
-              <p className="font-medium text-xl leading-5 text-black mt-4">
-                Liam
-              </p>
+              <p className="font-medium text-xl leading-5 mt-4">Liam</p>
             </div>
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
               <img
                 className="md:block hidden"
                 src="https://i.ibb.co/7nSJPXQ/Rectangle-121.png"
-                alt="Elijah featured image"
+                alt="Elijah featured image1"
               />
               <img
                 className="md:hidden block"
                 src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
-                alt="Elijah featured image"
+                alt="Elijah featured image2"
               />
-              <p className="font-medium text-xl leading-5 text-black mt-4">
-                Elijah
-              </p>
+              <p className="font-medium text-xl leading-5 mt-4">Elijah</p>
             </div>
           </div>
         </div>

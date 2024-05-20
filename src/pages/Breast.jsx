@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import breastApi from "../axios/axios";
 import pic from "../images/pic-2.png";
+import toast from "react-hot-toast";
 
 function Breast() {
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     Radius_mean: "",
     smoothness_mean: "",
@@ -23,8 +26,6 @@ function Breast() {
     fractal_dimension_worst: "",
   });
 
-  const [errors, setErrors] = useState({});
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -38,6 +39,7 @@ function Breast() {
 
     Object.keys(formData).forEach((key) => {
       const value = parseFloat(formData[key]);
+
       if (isNaN(value) || value < 0 || value > 100) {
         newErrors[key] = `${key.replace(
           /_/g,
@@ -47,27 +49,48 @@ function Breast() {
     });
 
     setErrors(newErrors);
+
     return Object.keys(newErrors).length === 0;
   };
 
+  async function predictBreastCancer(payload) {
+    try {
+      const res = await breastApi.post("/breast-predict", payload);
+      console.log(res);
+      const { data } = res;
+      console.log(data);
+      toast.success(data.message);
+      window.scrollTo(0, 0);
+    } catch (err) {
+      console.log(err);
+      toast.error(err.message);
+    }
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (validateForm()) {
-      console.log("Form submitted", formData);
+      predictBreastCancer(formData);
+    } else {
+      console.log("Form is not valid");
     }
   };
 
   return (
-    <>
-      <section className="min-h-screen flex items-stretch text-white">
+    <React.Fragment>
+      <section className="min-h-screen flex text-white">
         <div
-          className="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center"
           style={{
             backgroundImage: `url(${pic})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
           }}
+          className="hidden h-screen sticky top-0 min-[992px]:flex w-1/2 justify-center items-center"
         >
-          <div className="absolute bg-black opacity-60 inset-0 z-0" />
-          <div className="w-full px-24 z-10">
+          <div className="w-full h-full absolute bg-black opacity-60 inset-0 z-[0]"></div>
+          <div className="px-10 z-[1]">
             <h1 className="text-5xl font-bold text-left tracking-wide">
               Keep it special
             </h1>
@@ -76,53 +99,57 @@ function Breast() {
             </p>
           </div>
         </div>
-        <div
-          className="lg:w-1/2 w-full flex items-center justify-center text-center md:px-16 px-0 z-0"
-          style={{ backgroundColor: "#161616" }}
+        <section
+          className={`relative w-full min-[992px]:w-1/2 py-4 z-[1] bg-slate-800`}
+          style={
+            window.innerWidth <= 991
+              ? {
+                  backgroundImage: `url(${pic})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundAttachment: "fixed",
+                }
+              : {}
+          }
         >
-          <div
-            className="absolute lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center"
-            style={{
-              backgroundImage: `url(${pic})`,
-            }}
+          <div className="block min-[992px]:hidden w-full h-full absolute bg-black opacity-60 inset-0 -z-[1]"></div>
+          <h2 className="font-medium text-2xl text-center">
+            Enter Details for Prediction
+          </h2>
+          <form
+            onSubmit={handleSubmit}
+            className="px-6 sm:px-20 md:px-40 min-[992px]:px-4 py-4 w-full flex flex-col gap-4"
           >
-            <div className="absolute bg-black opacity-60 inset-0 z-0" />
-          </div>
-          <div className="w-full py-6 z-20">
-            <p className="text-gray-100">Enter Details for Prediction</p>
-            <form
-              onSubmit={handleSubmit}
-              className="sm:w-2/3 w-full px-4 lg:px-0 mx-auto"
-            >
-              {Object.keys(formData).map((field) => (
-                <div key={field} className="pb-2 pt-4">
-                  <input
-                    type="number"
-                    name={field}
-                    id={field}
-                    placeholder={`Enter ${field.replace(/_/g, " ")}`}
-                    required
-                    min="0"
-                    max="100"
-                    className="block w-full p-4 text-lg rounded-sm bg-black"
-                    value={formData[field]}
-                    onChange={handleChange}
-                  />
-                  {errors[field] && (
-                    <p className="text-red-500">{errors[field]}</p>
-                  )}
-                </div>
-              ))}
-              <div className="px-4 pb-2 pt-4">
-                <button className="uppercase block w-full p-4 text-lg rounded-full bg-indigo-500 hover:bg-indigo-600 focus:outline-none">
-                  Predict
-                </button>
+            {Object.keys(formData).map((field) => (
+              <div key={field}>
+                <input
+                  type="number"
+                  name={field}
+                  id={field}
+                  placeholder={`Enter ${field.replace(/_/g, " ")}`}
+                  required
+                  min="0"
+                  max="100"
+                  className="block w-full p-4 text-lg rounded bg-black bg-opacity-80"
+                  value={formData[field]}
+                  onChange={handleChange}
+                  onWheelCapture={(e) => e.target.blur()}
+                />
+                {errors[field] && (
+                  <p className="font-medium text-red-500">{errors[field]}</p>
+                )}
               </div>
-            </form>
-          </div>
-        </div>
+            ))}
+            <div>
+              <button className="uppercase block w-full py-4 text-lg font-medium rounded-full duration-200 bg-indigo-600 hover:bg-indigo-800 focus:outline-none">
+                Predict
+              </button>
+            </div>
+          </form>
+        </section>
       </section>
-    </>
+    </React.Fragment>
   );
 }
 

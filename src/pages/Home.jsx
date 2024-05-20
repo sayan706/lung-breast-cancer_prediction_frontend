@@ -4,17 +4,31 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="flex flex-wrap bg-slate-600 min-h-screen">
-      <div className="w-full sm:w-8/12 mb-10">
-        <div className="container mx-auto h-full sm:p-10">
-          <header className="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
-            <div className="w-full">
-              <h1 className="text-4xl lg:text-6xl font-bold">
+    <section
+      className="relative z-[1] flex lg:flex-row min-h-screen bg-slate-600"
+      style={
+        window.innerWidth <= 1023
+          ? {
+              backgroundImage: `url(${logo})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundAttachment: "fixed",
+            }
+          : {}
+      }
+    >
+      <div className="w-full h-full absolute bg-black opacity-55 inset-0 -z-[1]"></div>
+      <div className="flex justify-center items-center w-full lg:w-8/12">
+        <div className="sm:container sm:mx-auto">
+          <header className="px-4 lg:flex items-center">
+            <div className="w-full py-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
                 BeastLung: Advanced AI-Powered Lung Cancer Prediction and Early
                 Detection
               </h1>
-              <div className="w-20 h-2 bg-purple-700 my-4" />
-              <p className="text-xl mb-10">
+              <div className="w-40 h-2 bg-purple-500 my-4 rounded-full" />
+              <p className="text-xl mb-10 text-white">
                 BeastLung: Advanced AI-Powered Prediction offers cutting-edge
                 technology for early detection of lung and breast cancer.
                 Utilizing sophisticated algorithms, our platform provides
@@ -22,11 +36,17 @@ function Home() {
                 Empower your health decisions with BeastLung's innovative and
                 reliable cancer prediction tools.
               </p>
-              <div className="flex space-x-4">
-                <Link to="lung-predict" className="bg-purple-500 text-white text-xl font-medium px-4 py-2 rounded shadow">
+              <div className="flex flex-wrap justify-center items-center gap-4">
+                <Link
+                  to="lung-predict"
+                  className="bg-purple-500 text-white text-xl font-medium px-4 py-2 rounded shadow"
+                >
                   Predict Here for Lung Cancer
                 </Link>
-                <Link to="breast-predict" className="bg-purple-500 text-white text-xl font-medium px-4 py-2 rounded shadow">
+                <Link
+                  to="breast-predict"
+                  className="bg-purple-500 text-white text-xl font-medium px-4 py-2 rounded shadow"
+                >
                   Predict Here for Breast Cancer
                 </Link>
               </div>
@@ -34,12 +54,16 @@ function Home() {
           </header>
         </div>
       </div>
-      <img
-        src={logo}
-        alt="Leafs"
-        className="w-full h-48 object-cover sm:h-screen sm:w-4/12"
-      />
-    </div>
+      <div
+        className="hidden lg:block lg:flex-grow"
+        style={{
+          backgroundImage: `url(${logo})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
+    </section>
   );
 }
 
