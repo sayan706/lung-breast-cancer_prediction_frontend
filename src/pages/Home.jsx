@@ -29,7 +29,7 @@ function Home() {
               </h1>
               <div className="w-40 h-2 bg-purple-500 my-4 rounded-full" />
               <p className="text-xl mb-10 text-white">
-                BeastLung: Advanced AI-Powered Prediction offers cutting-edge
+                BreastLung: Advanced AI-Powered Prediction offers cutting-edge
                 technology for early detection of lung and breast cancer.
                 Utilizing sophisticated algorithms, our platform provides
                 accurate predictions to aid in timely diagnosis and treatment.
