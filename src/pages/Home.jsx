@@ -24,8 +24,8 @@ function Home() {
           <header className="px-4 lg:flex items-center">
             <div className="w-full py-6">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-                BeastLung: Advanced AI-Powered Lung Cancer Prediction and Early
-                Detection
+                BreastLung: Advanced AI-Powered Lung Cancer and Breast Cancer
+                Prediction and Early Detection
               </h1>
               <div className="w-40 h-2 bg-purple-500 my-4 rounded-full" />
               <p className="text-xl mb-10 text-white">

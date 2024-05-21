@@ -1,4 +1,9 @@
 import React from "react";
+import hetc from "../images/hetc.png";
+import sayan from "../images/sayan.png";
+import supratim from "../images/supratim.png";
+import arijit from "../images/arijit.png";
+import biswarup from "../images/Biswarup.png";
 
 function About() {
   return (
@@ -9,21 +14,22 @@ function About() {
             About Us
           </h1>
           <p className="font-normal text-base leading-6 text-gray-200">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum.In the first place we have granted to God, and
-            by this our present charter confirmed for us and our heirs forever
-            that the English Church shall be free, and shall have her rights
-            entire, and her liberties inviolate; and we will that it be thus
-            observed; which is apparent from
+            Welcome to our Breast and Lung Cancer Prediction platform, where we
+            harness the power of Machine Learning (ML) and Artificial
+            Intelligence (AI) to provide early and accurate cancer predictions.
+            Our mission is to revolutionize the way cancer is detected, offering
+            a vital tool in the fight against two of the most prevalent and
+            deadly cancers worldwide. By utilizing advanced algorithms and vast
+            datasets, our technology can identify patterns and markers that may
+            be missed by traditional methods, enabling earlier diagnosis and
+            improving the chances of successful treatment. Our commitment is to
+            empower healthcare providers with cutting-edge tools that enhance
+            decision-making and ultimately save lives. Join us in our journey to
+            make cancer detection more precise, accessible, and life-saving.
           </p>
         </div>
         <div className="w-full lg:w-8/12 shadow-lg shadow-gray-900">
-          <img
-            className="w-full h-full"
-            src="https://i.ibb.co/FhgPJt8/Rectangle-116.png"
-            alt="A group of People"
-          />
+          <img className="w-full h-full" src={hetc} alt="hetc college" />
         </div>
       </div>
       <div className="flex lg:flex-row flex-col justify-between gap-8 pt-12">
@@ -32,68 +38,42 @@ function About() {
             Our Story
           </h1>
           <p className="font-normal text-base leading-6 text-gray-200">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum.In the first place we have granted to God, and
-            by this our present charter confirmed for us and our heirs forever
-            that the English Church shall be free, and shall have her rights
-            entire, and her liberties inviolate; and we will that it be thus
-            observed; which is apparent from
+            Our story began with a vision to combat breast and lung cancer using
+            Machine Learning and Artificial Intelligence. Faced with challenges
+            in data and technology, our dedicated team worked tirelessly to
+            develop a powerful platform for early and accurate cancer
+            prediction. Through innovation and perseverance, we've created a
+            tool that offers hope and a better chance for successful treatment,
+            demonstrating the transformative power of technology in healthcare.
           </p>
         </div>
         <div className="w-full lg:w-8/12 lg:pt-8">
           <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg shadow-gray-900 rounded-md text-white">
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
-              <img
-                className="md:block hidden"
-                src="https://i.ibb.co/FYTKDG6/Rectangle-118-2.png"
-                alt="Alexa featured Image1"
-              />
-              <img
-                className="md:hidden block"
-                src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
-                alt="Alexa featured Image2"
-              />
-              <p className="font-medium text-xl leading-5 mt-4">Alexa</p>
+              <img className="md:block hidden" src={sayan} alt="sayan" />
+              <img className="md:hidden block" src={sayan} alt="sayan" />
+              <p className="font-medium text-xl leading-5 mt-4">
+                Sayan Chatterjee
+              </p>
             </div>
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
-              <img
-                className="md:block hidden"
-                src="https://i.ibb.co/fGmxhVy/Rectangle-119.png"
-                alt="Olivia featured Image1"
-              />
-              <img
-                className="md:hidden block"
-                src="https://i.ibb.co/NrWKJ1M/Rectangle-119.png"
-                alt="Olivia featured Image2"
-              />
-              <p className="font-medium text-xl leading-5 mt-4">Olivia</p>
+              <img className="md:block hidden" src={supratim} alt="supratim" />
+              <img className="md:hidden block" src={supratim} alt="supratim" />
+              <p className="font-medium text-xl leading-5 mt-4">Supratim Das</p>
             </div>
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
-              <img
-                className="md:block hidden"
-                src="https://i.ibb.co/Pc6XVVC/Rectangle-120.png"
-                alt="Liam featued Image1"
-              />
-              <img
-                className="md:hidden block"
-                src="https://i.ibb.co/C5MMBcs/Rectangle-120.png"
-                alt="Liam featued Image2"
-              />
-              <p className="font-medium text-xl leading-5 mt-4">Liam</p>
+              <img className="md:block hidden" src={arijit} alt="arijit" />
+              <img className="md:hidden block" src={arijit} alt="arijit" />
+              <p className="font-medium text-xl leading-5 mt-4">
+                Arijit Debnath
+              </p>
             </div>
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
-              <img
-                className="md:block hidden"
-                src="https://i.ibb.co/7nSJPXQ/Rectangle-121.png"
-                alt="Elijah featured image1"
-              />
-              <img
-                className="md:hidden block"
-                src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
-                alt="Elijah featured image2"
-              />
-              <p className="font-medium text-xl leading-5 mt-4">Elijah</p>
+              <img className="md:block hidden" src={biswarup} alt="biswarup" />
+              <img className="md:hidden block" src={biswarup} alt="biswarup" />
+              <p className="font-medium text-xl leading-5 mt-4">
+                Biswarup Ghosh
+              </p>
             </div>
           </div>
         </div>

@@ -114,10 +114,10 @@ function Lung() {
           <div className="w-full h-full absolute bg-black opacity-60 inset-0 z-[0]"></div>
           <div className="px-10 z-[1]">
             <h1 className="text-5xl font-bold text-left tracking-wide">
-              Keep it special
+              Measure Your Lung Cancer Here
             </h1>
             <p className="text-3xl my-4">
-              Capture your personal memory in a unique way, anywhere.
+              Stay Safe and Healthy and keep Supporting Us.
             </p>
           </div>
         </div>
@@ -137,7 +137,7 @@ function Lung() {
         >
           <div className="block min-[992px]:hidden w-full h-full absolute bg-black opacity-60 inset-0 -z-[1]"></div>
           <h2 className="font-medium text-2xl text-center">
-            Enter Details for Prediction
+            Enter Details for Lung Cancer Prediction
           </h2>
           <form
             onSubmit={handleSubmit}
@@ -149,7 +149,7 @@ function Lung() {
                 name="GENDER"
                 id="GENDER"
                 required
-                placeholder="If male enter 1 for female enter 0"
+                placeholder="Enter 1 if male Enter 0 if female."
                 className="block w-full p-4 text-lg rounded bg-black bg-opacity-80"
                 value={formData.GENDER}
                 onChange={handleChange}
