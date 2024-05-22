@@ -114,10 +114,10 @@ function Lung() {
           <div className="w-full h-full absolute bg-black opacity-60 inset-0 z-[0]"></div>
           <div className="px-10 z-[1]">
             <h1 className="text-5xl font-bold text-left tracking-wide">
-              Measure Your Lung Cancer Here
+              Measure Your Lung Cancer Risk Here
             </h1>
             <p className="text-3xl my-4">
-              Stay Safe and Healthy and keep Supporting Us.
+              Stay safe and healthy, and keep supporting us.
             </p>
           </div>
         </div>

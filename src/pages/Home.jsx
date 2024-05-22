@@ -29,12 +29,12 @@ function Home() {
               </h1>
               <div className="w-40 h-2 bg-purple-500 my-4 rounded-full" />
               <p className="text-xl mb-10 text-white">
-                BreastLung: Advanced AI-Powered Prediction offers cutting-edge
-                technology for early detection of lung and breast cancer.
-                Utilizing sophisticated algorithms, our platform provides
-                accurate predictions to aid in timely diagnosis and treatment.
-                Empower your health decisions with BeastLung's innovative and
-                reliable cancer prediction tools.
+                BreastLung leverages advanced AI technology for the early
+                detection of lung and breast cancer. Our platform uses
+                sophisticated algorithms to provide accurate predictions, aiding
+                timely diagnosis and treatment. Empower your health decisions
+                with BreastLung's innovative and reliable cancer prediction
+                tools.
               </p>
               <div className="flex flex-wrap justify-center items-center gap-4">
                 <Link

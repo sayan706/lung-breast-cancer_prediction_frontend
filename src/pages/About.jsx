@@ -14,15 +14,15 @@ function About() {
             About Us
           </h1>
           <p className="font-normal text-base leading-6 text-gray-200">
-            Welcome to our Breast and Lung Cancer Prediction platform, where we
+            Welcome to our Breast and Lung Cancer Prediction platform. Here, we
             harness the power of Machine Learning (ML) and Artificial
             Intelligence (AI) to provide early and accurate cancer predictions.
-            Our mission is to revolutionize the way cancer is detected, offering
-            a vital tool in the fight against two of the most prevalent and
-            deadly cancers worldwide. By utilizing advanced algorithms and vast
-            datasets, our technology can identify patterns and markers that may
-            be missed by traditional methods, enabling earlier diagnosis and
-            improving the chances of successful treatment. Our commitment is to
+            Our mission is to revolutionize cancer detection, offering a vital
+            tool in the fight against two of the most prevalent and deadly
+            cancers worldwide. By utilizing advanced algorithms and vast
+            datasets, our technology identifies patterns and markers that may be
+            missed by traditional methods. This enables earlier diagnosis and
+            improves the chances of successful treatment. Our commitment is to
             empower healthcare providers with cutting-edge tools that enhance
             decision-making and ultimately save lives. Join us in our journey to
             make cancer detection more precise, accessible, and life-saving.
@@ -39,12 +39,13 @@ function About() {
           </h1>
           <p className="font-normal text-base leading-6 text-gray-200">
             Our story began with a vision to combat breast and lung cancer using
-            Machine Learning and Artificial Intelligence. Faced with challenges
-            in data and technology, our dedicated team worked tirelessly to
-            develop a powerful platform for early and accurate cancer
-            prediction. Through innovation and perseverance, we've created a
-            tool that offers hope and a better chance for successful treatment,
-            demonstrating the transformative power of technology in healthcare.
+            Machine Learning (ML) and Artificial Intelligence (AI). Faced with
+            challenges in data and technology, our dedicated team worked
+            tirelessly to develop a powerful platform for early and accurate
+            cancer prediction. Through innovation and perseverance, we have
+            created a tool that offers hope and a better chance for successful
+            treatment, demonstrating the transformative power of technology in
+            healthcare.
           </p>
         </div>
         <div className="w-full lg:w-8/12 lg:pt-8">
